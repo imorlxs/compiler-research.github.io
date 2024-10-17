@@ -121,7 +121,7 @@ properly. Reboot your system and run jekyll -v again.
 If you use docker, the following line will build and serve the site locally:
 
 ```bash
-docker run --rm -v "$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:3.8 jekyll serve
+docker run --rm -v "$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll jekyll serve
 ```
 
 If you want to enable LiveReload (pages automatically reload when jekyll rebuilds after detecting changes), then use this instead:
@@ -129,7 +129,7 @@ If you want to enable LiveReload (pages automatically reload when jekyll rebuild
 ```bash
 docker run --rm -v "$PWD:/srv/jekyll" \
            -p 4000:4000 -p 35729:35729 \
-           -it jekyll/jekyll:3.8 \
+           -it jekyll/jekyll \
            jekyll serve --livereload
 ```
 
